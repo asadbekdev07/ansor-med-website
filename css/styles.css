@@ -1,19 +1,58 @@
-/* GLOBAL */
-* {
-  box-sizing: border-box;
+:root {
+  --accent-color: #ffffff;
 }
+
+/* FONT-FACE */
+
+@font-face {
+  font-display: swap;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/open-sans-v40-latin-regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/open-sans-v40-latin-600.woff2") format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/open-sans-v40-latin-700.woff2") format("woff2");
+}
+
+/* GLOBAL  */
+
 html {
+  box-sizing: border-box;
+  height: 100%;
   scroll-behavior: smooth;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   padding: 0;
   margin: 0;
   font-family: "Open Sans", "Arial", sans-serif;
   font-size: 16px;
   line-height: 1.5;
-  color: #444;
-  background-color: #FFFFFF;
+  color: #444444;
+  background-color: var(--accent-color);
   letter-spacing: 0.5px;
 }
 
@@ -45,7 +84,7 @@ body {
 /* SITE-LOGO  */
 .site-logo {
   display: flex;
-  color: #222;
+  color: #222222;
   font-style: 24px;
   font-weight: 600;
   text-decoration: none;
@@ -84,7 +123,7 @@ body {
 .sitenav-link {
   display: block;
   text-decoration: none;
-  color: #222;
+  color: #222222;
   transition: color 0.4s ease;
 }
 .sitenav-link:hover {
@@ -97,7 +136,7 @@ body {
 .main-link {
   display: inline-block;
   text-decoration: none;
-  color: #fff;
+  color: var(--accent-color);
   text-transform: uppercase;
   font-style: 15px;
   letter-spacing: 2px;
@@ -109,29 +148,33 @@ body {
   background-color 0.4s ease;
 }
 .main-link:hover {
-  background-color: #fff;
+  background-color: var(--accent-color);
   color:#de2e54
 }
 .main-link:active {
   background: #de2e54;
-  color:#fff;
+  color:var(--accent-color);
   opacity: 0.6;
 }
 .main-link-solid:hover {
   background-color: rgba(222, 46, 84, 0.8);
-  color: #fff;
+  color: var(--accent-color);
 }
 .main-link-solid:active {
   background-color: rgba(222, 46, 84, 0.6);
-  color: #fff;
+  color: var(--accent-color);
   opacity: 1;
 }
 
 
 /* HERO */
+.main-content {
+  flex-grow: 1;
+}
+
 .hero {
   background-color: #0eb4c1;
-  color: #fff;
+  color: var(--accent-color);
 }
 .hero-container {
   display: flex;
@@ -174,7 +217,7 @@ body {
   text-align: center;
   font-size: 36px;
   line-height: 1.2;
-  color: #000;
+  color: #000000;
 }
 .index-services-list {
   width: 864px;
@@ -209,12 +252,12 @@ body {
   font-size: 24px;
   line-height: 1.2;
   font-weight: 700;
-  color: #222;
+  color: #222222;
   margin-bottom: 24px;
 }
 .index-service-description {
   margin: 0;
-  color: #444;
+  color: #444444;
 }
 .index-services-actions {
   display: flex;
@@ -224,7 +267,7 @@ body {
 /* CTA  */
 .cta {
   background-color: #0eb4c1;
-  color: #fff;
+  color: var(--accent-color);
   padding-top: 64px;
   padding-bottom: 64px;
 }
@@ -245,12 +288,12 @@ body {
 
 .main-link-outline {
   background-color: transparent;
-  border: 2px solid #fff;
+  border: 2px solid var(--accent-color);
 }
 .main-link-outline:hover {
   background-color: #de2e54;
   border: 2px solid #de2e54;
-  color: #fff;
+  color: var(--accent-color);
 }
 .main-link-outline:not(:last-child) {
   margin-right: 40px;
@@ -261,7 +304,7 @@ body {
 .site-footer {
   padding-top: 24px;
   padding-bottom: 24px;
-  background-color: #222;
+  background-color: #222222;
 }
 
 .site-footer-container {
@@ -270,18 +313,18 @@ body {
   align-items: center;
 }
 .site-logo-site-footer {
-  color: #fff;
+  color: var(--accent-color);
 }
 .site-logo-site-footer:active {
-  color: #fff;
+  color: var(--accent-color);
   opacity: 0.6;
 }
 .sitenav-site-footer .sitenav-link {
-  color: #fff;
+  color: var(--accent-color);
 }
 .sitenav-site-footer .sitenav-link:hover {
   color: #de2e54;
 }
 .sitenav-site-footer .sitenav-link:active {
-  color: #fff;
+  color: var(--accent-color);
 }
